@@ -57,7 +57,7 @@ if app_mode=='Home':
 
     gauge1,gauge2= st.columns(2)
     with gauge1:
-        st.markdown("### Dibetes Disease Risk")
+        st.markdown("### Dibetes Diasease Risk")
         fig = go.Figure()
 
         fig = go.Figure(go.Indicator(
