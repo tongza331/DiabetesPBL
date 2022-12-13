@@ -118,180 +118,107 @@ if app_mode=='Home':
 elif app_mode=='Diabetes Prediction':
     st.subheader('Fill in patient details to get predict')
 
-    gender_option = st.selectbox(
+    col1,col2,col3 = st.columns(3)
+    with col1:
+        gender_option = st.selectbox(
                 'Gender',
                 ('Male', 'Female'))
     if gender_option == 'Male':
         gender = 1
     elif gender_option == 'Female':
         gender = 0
+    with col2:
+        age = st.number_input('Age')
+    with col3:
+        numResident = st.number_input('Number of residents')
 
-    age = st.number_input('Age')
-    numResident = st.number_input('Number of residents')
-    height = st.number_input('Height',value=1)
-    bodyWeight = st.number_input('Weight',value=1)
-    strides = st.number_input('Strides')
-    bfp = st.number_input('Body Fat Percentage')
-    bm = st.number_input('Basal Metabolism')
-    smp = st.number_input('Skeletal Muscle Percentage')
-    vfl = st.number_input('Visceral Fat Level')
-    bodyage = st.number_input('Body Age')
-    
-    # antihypertensive_op = st.selectbox(
-    #             'Ever patient use antihypertensive?',
-    #             ('Yes', 'No'))
-    # if antihypertensive_op == 'Yes':
-    #     antihypertensive = 1
-    # else:
-    #     antihypertensive = 0
+    col4,col5,col6 = st.columns(3)
+    with col4:
+        height = st.number_input('Height',value=1)
+    with col5:
+        bodyWeight = st.number_input('Weight',value=1)
+    with col6:
+        strides = st.number_input('Strides')
 
-    antidepressant_op = st.selectbox(
-                'Ever patient use antidepressant?',
-                ('Yes', 'No'))
-    if antidepressant_op == 'Yes':
-        antidepressant = 1
-    else:
-        antidepressant = 0
+    col7,col8,col9 = st.columns(3)   
+    with col7: 
+        bfp = st.number_input('Body Fat Percentage')
+    with col8: 
+        bm = st.number_input('Basal Metabolism')
+    with col9: 
+        smp = st.number_input('Skeletal Muscle Percentage')
 
-    osteoporosis_op = st.selectbox(
-                'Ever patient use osteoporosis?',
-                ('Yes', 'No'))
-    if osteoporosis_op == 'Yes':
-        osteoporosis = 1
-    else:
-        osteoporosis = 0
+    col10,col11,col12 = st.columns(3) 
+    with col10:
+        vfl = st.number_input('Visceral Fat Level')
+    with col11:
+        bodyage = st.number_input('Body Age')
+    with col12:
+        antidepressant_op = st.selectbox(
+                    'Ever patient use antidepressant?',
+                    ('Yes', 'No'))
+        if antidepressant_op == 'Yes':
+            antidepressant = 1
+        else:
+            antidepressant = 0
 
-    antidiabetic_op = st.selectbox(
-                'Ever patient use antidiabetic?',
-                ('Yes', 'No'))
-    if antidiabetic_op == 'Yes':
-        antidiabetic = 1
-    else:
-        antidiabetic = 0
+    col13,col14,col15 = st.columns(3)
+    with col13:
+        osteoporosis_op = st.selectbox(
+                    'Ever patient use osteoporosis?',
+                    ('Yes', 'No'))
+        if osteoporosis_op == 'Yes':
+            osteoporosis = 1
+        else:
+            osteoporosis = 0
+    with col14:
+        antidiabetic_op = st.selectbox(
+                    'Ever patient use antidiabetic?',
+                    ('Yes', 'No'))
+        if antidiabetic_op == 'Yes':
+            antidiabetic = 1
+        else:
+            antidiabetic = 0
+    with col15:
+        drinking_op = st.selectbox(
+                    'Ever patient drinking?',
+                    ('Yes', 'No'))
+        if drinking_op == 'Yes':
+            drinking = 1
+        else:
+            drinking = 0
 
-    # smoking_op = st.selectbox(
-    #             'Ever patient smoking?',
-    #             ('Yes', 'No'))
-    # if smoking_op == 'Yes':
-    #     smoking = 1
-    # else:
-    #     smoking = 0
-    
-    drinking_op = st.selectbox(
-                'Ever patient drinking?',
-                ('Yes', 'No'))
-    if drinking_op == 'Yes':
-        drinking = 1
-    else:
-        drinking = 0
-
-    # MesurementBloodPressure_op = st.selectbox(
-    #             'Everyday With or without blood pressure measurement',
-    #             ('With', 'Without'))
-    # if MesurementBloodPressure_op == 'With':
-    #     MesurementBloodPressure = 1
-    # else:
-    #     MesurementBloodPressure = 0
-    
-    # eatingHabbit_op = st.selectbox(
-    #             'Eating habit',
-    #             ('3 meals a day', '2 meals a day'))
-    # if eatingHabbit_op == '3 meals a day':
-    #     eatingHabbit = 1
-    # else:
-    #     eatingHabbit = 0
-
-    preference_op = st.selectbox(
-                'Eating habit',
-                ('I like light taste', 'I like sweets'))
-    if preference_op == 'I like light taste':
-        preference = 0
-    else:
-        preference = 1
-
-    # sleep_op = st.selectbox(
-    #             'Sleep state',
-    #             ('Sleeping well', 'Sleeping','Not sleep'))
-    # if sleep_op == 'Sleeping':
-    #     sleep = 1
-    # elif sleep_op == 'Sleeping well':
-    #     sleep = 2
-    # else:
-    #     sleep = 3
-
-    anxietyHealth_op = st.selectbox(
-                'Anxiety health',
-                ('A lot', 'Some','None'))
-    if anxietyHealth_op == 'A lot':
-        anxietyHealth = 0
-    elif anxietyHealth_op == 'Some':
-        anxietyHealth = 2
-    else:
-        anxietyHealth = 1
-
-    anxietyForgetful_op = st.selectbox(
-                'Anxiety forgetful',
-                ('A lot', 'Some','None'))
-    if anxietyForgetful_op == 'A lot':
-        anxietyForgetful = 0
-    elif anxietyForgetful_op == 'Some':
-        anxietyForgetful = 2
-    else:
-        anxietyForgetful = 1
-
-    # stairWithoutTransmitted_op = st.selectbox(
-    #             'Can up and down stairs without transmitted?',
-    #             ('Yes', 'No'))
-    # if stairWithoutTransmitted_op == 'Yes':
-    #     stairWithoutTransmitted = 1
-    # else:
-    #     stairWithoutTransmitted = 0
-
-    # walk15m_op = st.selectbox(
-    #             'Can walk for more than 15 minutes?',
-    #             ('Yes', 'No'))
-    # if walk15m_op == 'Yes':
-    #     walk15m = 1
-    # else:
-    #     walk15m = 0
-
-    # walkWithoutCane_op = st.selectbox(
-    #             'Can walk without a cane?',
-    #             ('Yes', 'No'))
-    # if walkWithoutCane_op == 'Yes':
-    #     walkWithoutCane = 1
-    # else:
-    #     walkWithoutCane = 0
-
-    # goingout_op = st.selectbox(
-    #             'Actively going out',
-    #             ('Yes', 'No'))
-    # if goingout_op == 'Yes':
-    #     goingout = 1
-    # else:
-    #     goingout = 0
-
-    # eatHardFood_op = st.selectbox(
-    #             'Can patient eat hard food?',
-    #             ('Yes', 'No'))
-    # if eatHardFood_op == 'Yes':
-    #     eatHardFood = 1
-    # else:
-    #     eatHardFood = 0
-
-    # hbp_op = st.selectbox(
-    #             'Have High blood pressure?',
-    #             ('Yes', 'No'))
-    # if hbp_op == 'Yes':
-    #     hbp = 1
-    # else:
-    #     hbp = 0
+    col16,col17,col18 = st.columns(3)
+    with col16:
+        preference_op = st.selectbox(
+                    'Eating habit',
+                    ('I like light taste', 'I like sweets'))
+        if preference_op == 'I like light taste':
+            preference = 0
+        else:
+            preference = 1
+    with col17:
+        anxietyHealth_op = st.selectbox(
+                    'Anxiety health',
+                    ('A lot', 'Some','None'))
+        if anxietyHealth_op == 'A lot':
+            anxietyHealth = 0
+        elif anxietyHealth_op == 'Some':
+            anxietyHealth = 2
+        else:
+            anxietyHealth = 1
+    with col18:
+        anxietyForgetful_op = st.selectbox(
+                    'Anxiety forgetful',
+                    ('A lot', 'Some','None'))
+        if anxietyForgetful_op == 'A lot':
+            anxietyForgetful = 0
+        elif anxietyForgetful_op == 'Some':
+            anxietyForgetful = 2
+        else:
+            anxietyForgetful = 1
     
     bmi = (height*0.01)/bodyWeight
-    # features = [gender,age,numResident,height,bodyWeight,strides,bfp,bm,smp,vfl,bodyage,bmi,antihypertensive,antidepressant
-    #             ,osteoporosis,antidiabetic,smoking,drinking,MesurementBloodPressure,eatingHabbit,preference
-    #             ,sleep,anxietyHealth,anxietyForgetful,stairWithoutTransmitted,walk15m,walkWithoutCane,
-    #             goingout,eatHardFood,hbp]
     features = [gender,age,numResident,height,bodyWeight,strides,bfp,bm,smp,vfl,bodyage,bmi,antidepressant
                 ,osteoporosis,antidiabetic,drinking,preference
                 ,anxietyHealth,anxietyForgetful]
