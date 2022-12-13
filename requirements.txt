@@ -75,19 +75,6 @@ Jinja2==3.1.2
 joblib==1.2.0
 json5==0.9.10
 jsonschema==4.16.0
-jupyter==1.0.0
-jupyter-console==6.4.4
-jupyter-server==1.21.0
-jupyter_client==7.4.4
-jupyter_core==4.11.2
-jupyterlab==3.5.0
-jupyterlab-pygments==0.2.2
-jupyterlab-widgets==3.0.4
-jupyterlab_server==2.16.1
-kaggle==1.5.12
-keras==2.10.0
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.2
 kiwisolver @ file:///D:/bld/kiwisolver_1657953200729/work
 korean-lunar-calendar==0.3.1
 libclang==14.0.6
