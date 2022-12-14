@@ -1,5 +1,5 @@
 # DiabetesPBL - This is Project for CPE393 PBL in KMUTT
-### Topic: Diabetes Prediction and Monitorig
+### Topic: Diabetes Prediction and Monitoring
 
 - Machine Learning Algorithm : XGBoost Classifier
 - Web Application : Streamlit
