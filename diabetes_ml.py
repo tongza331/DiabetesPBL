@@ -128,9 +128,9 @@ elif app_mode=='Diabetes Prediction':
     elif gender_option == 'Female':
         gender = 0
     with col2:
-        age = st.number_input('Age')
+        age = st.number_input('Age',value=0)
     with col3:
-        numResident = st.number_input('Number of residents')
+        numResident = st.number_input('Number of residents',value=0)
 
     col4,col5,col6 = st.columns(3)
     with col4:
@@ -138,7 +138,7 @@ elif app_mode=='Diabetes Prediction':
     with col5:
         bodyWeight = st.number_input('Weight',value=1)
     with col6:
-        strides = st.number_input('Strides')
+        strides = st.number_input('Strides',value=0)
 
     col7,col8,col9 = st.columns(3)   
     with col7: 
