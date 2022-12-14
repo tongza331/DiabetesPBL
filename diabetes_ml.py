@@ -218,7 +218,7 @@ elif app_mode=='Diabetes Prediction':
         else:
             anxietyForgetful = 1
     
-    bmi = (height*0.01)/bodyWeight
+    bmi = bodyWeight/((height/100)**2)
     features = [gender,age,numResident,height,bodyWeight,strides,bfp,bm,smp,vfl,bodyage,bmi,antidepressant
                 ,osteoporosis,antidiabetic,drinking,preference
                 ,anxietyHealth,anxietyForgetful]
