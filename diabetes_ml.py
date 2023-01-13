@@ -79,7 +79,7 @@ if app_mode=='Home':
                 'axis':{'range':[None,100]},
             }
         ))
-        # fig.update_layout(width=500,height=500)
+
         st.plotly_chart(fig, width=350,height=350)
     with gauge2:
         st.markdown("### Weight")
