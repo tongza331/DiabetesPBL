@@ -7,5 +7,5 @@
 - Demo : https://tongza331-diabetespbl-diabetes-ml-dfiqeu.streamlit.app/
 
 ### Files Detail
-- Data visualization : clean_data_viz_data0clean.ipynb
+**Dataset cannot public**
 - Model building : modelling_xgboost.ipynb
