@@ -1,4 +1,4 @@
-# DiabetesPBL - This is Project for CPE393PBL in KMUTT
+# DiabetesPBL - This is Project for CPE393 PBL in KMUTT
 **Dataset cannot public, if you want more information please contact me.**
 ### Topic: Diabetes Prediction and Monitoring
 
